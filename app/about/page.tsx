@@ -25,7 +25,7 @@ export default async function AboutPage() {
       </section>
 
       <section className="history section" id="history">
-        <div className="history-heading"><p className="eyebrow dark">Our history</p><h2>{content.historyTitle}</h2><p>{content.historyLead}</p></div>
+        <div className="history-heading"><div><p className="eyebrow dark">Our history</p><h2>{content.historyTitle}</h2></div><p>{content.historyLead}</p></div>
         <div className="history-timeline">
           {content.history.map((item, index) => (
             <article className="history-entry" key={item.title}><div><span>{index === 0 ? '2013' : index === 2 ? '2018' : index === 3 ? '2020' : index === 5 ? '2021–Today' : 'Our journey'}</span><i /></div><div><h3>{item.title}</h3><p>{item.body}</p></div></article>
