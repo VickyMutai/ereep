@@ -1,6 +1,8 @@
 import { requireChatGPTUser, chatGPTSignOutPath } from '../../chatgpt-auth';
 import { getProjectsContent } from '../../../db/projects-content';
 
+export const dynamic = 'force-dynamic';
+
 type AdminProjectsProps = { searchParams?: Promise<{ saved?: string }> };
 
 export default async function AdminProjectsPage({ searchParams }: AdminProjectsProps) {
@@ -8,7 +10,7 @@ export default async function AdminProjectsPage({ searchParams }: AdminProjectsP
   const [content, query] = await Promise.all([getProjectsContent(), searchParams]);
   return (
     <main className="admin-shell">
-      <aside className="admin-sidebar"><a href="/" className="admin-logo"><img src="/logo.png" alt="EREEP" /><span>Content Studio</span></a><nav><a href="/admin">Homepage</a><a href="/admin/about">About page</a><a className="active" href="/admin/projects">Projects page</a><a href="/admin/resources">Resources page</a></nav><a className="admin-view" href="/projects">View Projects page ↗</a></aside>
+      <aside className="admin-sidebar"><a href="/" className="admin-logo"><img src="/logo.png" alt="EREEP" /><span>Content Studio</span></a><nav><a href="/admin">Homepage</a><a href="/admin/about">About page</a><a className="active" href="/admin/projects">Projects page</a><a href="/admin/resources">Resources page</a><a href="/admin/contact">Contact & enquiries</a></nav><a className="admin-view" href="/projects">View Projects page ↗</a></aside>
       <section className="admin-main">
         <header className="admin-header"><div><p>EREEP custom CMS</p><h1>Projects page content</h1></div><div><span>{user.displayName}</span><a href={chatGPTSignOutPath('/admin/projects')}>Sign out</a></div></header>
         {query?.saved === 'true' && <p className="admin-notice" role="status">Projects page content saved successfully.</p>}
