@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getStoriesContent } from '../../db/stories-content';
+import { SiteFooter } from '../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Impact Stories | EREEP',
@@ -35,7 +36,7 @@ export default async function StoriesPage() {
 
       <section className="story-cta section"><p className="eyebrow">Make more stories possible</p><h2>Stand alongside communities creating lasting change.</h2><div><a className="button" href="/contact">Partner with EREEP</a><span>Online donations will be added in a later phase.</span></div></section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <SiteFooter />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getResourcesContent } from '../../db/resources-content';
+import { SiteFooter } from '../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Impact & Resources | EREEP',
@@ -40,7 +41,7 @@ export default async function ResourcesPage() {
 
       <section className="resources-note section"><div><p className="eyebrow dark">Growing resource library</p><h2>Reports and publications will be added as they become available.</h2></div><p>The CMS foundation is ready for future reports, downloadable publications, partner materials and additional impact stories without changing the page structure.</p></section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <SiteFooter />
     </main>
   );
 }

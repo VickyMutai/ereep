@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getStoriesContent, getStoryBySlug } from '../../../db/stories-content';
+import { SiteFooter } from '../../components/SiteFooter';
 
 type StoryPageProps = { params: Promise<{ slug: string }> };
 
@@ -43,7 +44,7 @@ export default async function StoryPage({ params }: StoryPageProps) {
 
       <section className="related-stories section"><div className="section-heading"><div><p className="eyebrow dark">Continue reading</p><h2>More stories of impact</h2></div></div><div>{related.map((item) => <a href={'/stories/' + item.slug} key={item.slug}><span style={{ backgroundImage: 'url(' + item.image + ')' }} /><p>{item.category}</p><h3>{item.title}</h3><strong>Read story →</strong></a>)}</div></section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <SiteFooter />
     </main>
   );
 }

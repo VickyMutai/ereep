@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getAboutContent } from '../../db/about-content';
+import { SiteFooter } from '../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'About Us | EREEP',
@@ -57,7 +58,7 @@ export default async function AboutPage() {
         <div><p>{content.approachBody}</p><a className="button" href="/projects">See our projects</a></div>
       </section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <SiteFooter />
     </main>
   );
 }

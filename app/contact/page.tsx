@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getContactContent } from '../../db/contact';
+import { SiteFooter } from '../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Contact | EREEP',
@@ -48,7 +49,7 @@ export default async function ContactPage({ searchParams }: ContactProps) {
         </form>
       </section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <SiteFooter />
     </main>
   );
 }
