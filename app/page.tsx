@@ -22,9 +22,9 @@ export default async function Home({ searchParams }: HomeProps) {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="EREEP home"><img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" /></a>
         <nav aria-label="Primary navigation">
-          <a className="active" href="#top">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/contact">Contact</a>
+          <a className="active" href="#top">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/contact">Contact</a>
         </nav>
-        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div></details>
+        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div></details>
         <a className="button button-small" href="#donate">Donate</a>
       </header>
 
@@ -66,7 +66,7 @@ export default async function Home({ searchParams }: HomeProps) {
         <form action="/api/newsletter" method="post"><label htmlFor="email">Email address</label><div><input id="email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" /><button type="submit">Subscribe</button></div>{subscribed && <p className="form-success" role="status">Thank you — you are on the list.</p>}<small>Temporary signup only. We will connect a full newsletter service later.</small></form>
       </section>
 
-      <footer><a className="footer-brand" href="#top"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <footer><a className="footer-brand" href="#top"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
     </main>
   );
 }

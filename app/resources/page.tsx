@@ -8,12 +8,13 @@ export const metadata: Metadata = {
 
 export default async function ResourcesPage() {
   const content = await getResourcesContent();
+  const storySlugs = ['kevin-finding-purpose', 'clemencia-caregiver-to-entrepreneur', 'keeping-girls-in-school'];
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="/" aria-label="EREEP home"><img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" /></a>
-        <nav aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a className="active" href="/resources">Resources</a><a href="/contact">Contact</a></nav>
-        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/contact">Contact</a></div></details>
+        <nav aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a className="active" href="/resources">Resources</a><a href="/contact">Contact</a></nav>
+        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/contact">Contact</a></div></details>
         <a className="button button-small" href="/#donate">Donate</a>
       </header>
 
@@ -27,7 +28,7 @@ export default async function ResourcesPage() {
         <div className="story-list">{content.stories.map((story, index) => (
           <article className="story" key={story.title}>
             <div className="story-image" style={{ backgroundImage: 'url(' + story.image + ')' }} role="img" aria-label={story.title} />
-            <div className="story-copy"><span>0{index + 1}</span><p className="story-category">{story.category}</p><h3>{story.title}</h3><strong>{story.lead}</strong><details><summary>Read the full story <i aria-hidden="true">+</i></summary><p>{story.body}</p></details></div>
+            <div className="story-copy"><span>0{index + 1}</span><p className="story-category">{story.category}</p><h3>{story.title}</h3><strong>{story.lead}</strong><a className="story-read-link" href={'/stories/' + storySlugs[index]}>Read the full story <i aria-hidden="true">→</i></a></div>
           </article>
         ))}</div>
       </section>
@@ -39,7 +40,7 @@ export default async function ResourcesPage() {
 
       <section className="resources-note section"><div><p className="eyebrow dark">Growing resource library</p><h2>Reports and publications will be added as they become available.</h2></div><p>The CMS foundation is ready for future reports, downloadable publications, partner materials and additional impact stories without changing the page structure.</p></section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
     </main>
   );
 }

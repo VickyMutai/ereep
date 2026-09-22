@@ -21,8 +21,8 @@ export default async function ContactPage({ searchParams }: ContactProps) {
     <main>
       <header className="site-header">
         <a className="brand" href="/" aria-label="EREEP home"><img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" /></a>
-        <nav aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a className="active" href="/contact">Contact</a></nav>
-        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/resources">Resources</a></div></details>
+        <nav aria-label="Primary navigation"><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a className="active" href="/contact">Contact</a></nav>
+        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a></div></details>
         <a className="button button-small" href="/#donate">Donate</a>
       </header>
 
@@ -48,7 +48,7 @@ export default async function ContactPage({ searchParams }: ContactProps) {
         </form>
       </section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
     </main>
   );
 }

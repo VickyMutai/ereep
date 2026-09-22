@@ -12,8 +12,8 @@ export default async function AboutPage() {
     <main>
       <header className="site-header">
         <a className="brand" href="/" aria-label="EREEP home"><img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" /></a>
-        <nav aria-label="Primary navigation"><a href="/">Home</a><a className="active" href="/about">About Us</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/contact">Contact</a></nav>
-        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div></details>
+        <nav aria-label="Primary navigation"><a href="/">Home</a><a className="active" href="/about">About Us</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/contact">Contact</a></nav>
+        <details className="mobile-menu"><summary aria-label="Open navigation">Menu</summary><div><a href="/">Home</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/contact">Contact</a></div></details>
         <a className="button button-small" href="/#donate">Donate</a>
       </header>
 
@@ -57,7 +57,7 @@ export default async function AboutPage() {
         <div><p>{content.approachBody}</p><a className="button" href="/projects">See our projects</a></div>
       </section>
 
-      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
+      <footer><a className="footer-brand" href="/"><img src="/logo.png" alt="" /><strong>Edmund Rice Eldoret<br />Empowerment Program</strong></a><p>Empowering, liberating and transforming lives in the marginalized Langas community.</p><div><a href="/about">About</a><a href="/projects">Projects</a><a href="/stories">Stories</a><a href="/resources">Resources</a><a href="/admin">CMS</a></div><span>© {new Date().getFullYear()} EREEP</span></footer>
     </main>
   );
 }

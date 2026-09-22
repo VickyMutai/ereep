@@ -10,7 +10,7 @@ export default async function AdminResourcesPage({ searchParams }: AdminResource
   const [content, query] = await Promise.all([getResourcesContent(), searchParams]);
   return (
     <main className="admin-shell">
-      <aside className="admin-sidebar"><a href="/" className="admin-logo"><img src="/logo.png" alt="EREEP" /><span>Content Studio</span></a><nav><a href="/admin">Homepage</a><a href="/admin/about">About page</a><a href="/admin/projects">Projects page</a><a className="active" href="/admin/resources">Resources page</a><a href="/admin/contact">Contact & enquiries</a></nav><a className="admin-view" href="/resources">View Resources page ↗</a></aside>
+      <aside className="admin-sidebar"><a href="/" className="admin-logo"><img src="/logo.png" alt="EREEP" /><span>Content Studio</span></a><nav><a href="/admin">Homepage</a><a href="/admin/about">About page</a><a href="/admin/projects">Projects page</a><a href="/admin/stories">Impact stories</a><a className="active" href="/admin/resources">Resources page</a><a href="/admin/contact">Contact & enquiries</a></nav><a className="admin-view" href="/resources">View Resources page ↗</a></aside>
       <section className="admin-main">
         <header className="admin-header"><div><p>EREEP custom CMS</p><h1>Resources page content</h1></div><div><span>{user.displayName}</span><a href={chatGPTSignOutPath('/admin/resources')}>Sign out</a></div></header>
         {query?.saved === 'true' && <p className="admin-notice" role="status">Resources page content saved successfully.</p>}
