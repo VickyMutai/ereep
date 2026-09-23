@@ -1159,45 +1159,6 @@ h2 {
   align-items: center;
   gap: 32px;
 }
-.resources-hero {
-  position: relative;
-  min-height: 720px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  color: #fff;
-}
-.resources-hero-image {
-  position: absolute;
-  inset: 0;
-  background: url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=2000&q=88")
-    center/cover no-repeat;
-}
-.resources-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(12, 20, 51, 0.94),
-      rgba(12, 20, 51, 0.55) 60%,
-      rgba(12, 20, 51, 0.18)
-    ),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 55%);
-}
-.resources-hero-content {
-  position: relative;
-  z-index: 1;
-  width: min(930px, 84vw);
-  margin: 0 0 105px clamp(24px, 8vw, 124px);
-}
-.resources-hero-content > p:last-child {
-  max-width: 760px;
-  margin: 28px 0 0;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 20px;
-  line-height: 1.65;
-}
 .stories {
   background: var(--paper);
 }
@@ -1327,18 +1288,6 @@ h2 {
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   line-height: 1.4;
-}
-.resources-note {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(55px, 9vw, 150px);
-  background: var(--cream);
-}
-.resources-note > p {
-  margin: 42px 0 0;
-  color: #59606b;
-  font-size: 18px;
-  line-height: 1.75;
 }
 .contact-hero {
   position: relative;
@@ -1848,7 +1797,6 @@ h2 {
   .project-areas,
   .advocacy,
   .impact-heading,
-  .resources-note,
   .contact-layout,
   .story-article {
     grid-template-columns: 1fr;
@@ -1986,14 +1934,12 @@ h2 {
   }
   .about-hero,
   .projects-hero,
-  .resources-hero,
   .contact-hero,
   .stories-hero {
     min-height: 680px;
   }
   .about-hero-content,
   .projects-hero-content,
-  .resources-hero-content,
   .contact-hero-content,
   .stories-hero-content {
     width: auto;
@@ -2001,14 +1947,12 @@ h2 {
   }
   .about-hero-content h1,
   .projects-hero-content h1,
-  .resources-hero-content h1,
   .contact-hero-content h1,
   .stories-hero-content h1 {
     font-size: 50px;
   }
   .about-hero-content > p:last-child,
   .projects-hero-content > p:last-child,
-  .resources-hero-content > p:last-child,
   .contact-hero-content > p:last-child,
   .stories-hero-content > p:last-child {
     font-size: 17px;

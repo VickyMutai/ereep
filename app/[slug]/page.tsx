@@ -9,10 +9,6 @@ const pages: Record<string, { label: string; note: string }> = {
     label: "Projects",
     note: "Detailed programme and community-focus pages will live here.",
   },
-  resources: {
-    label: "Resources",
-    note: "Reports, publications, news and downloadable resources will live here.",
-  },
   contact: {
     label: "Contact",
     note: "Verified contact information and an enquiry form will live here.",

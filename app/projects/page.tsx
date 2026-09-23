@@ -23,7 +23,6 @@ export default async function ProjectsPage() {
             Projects
           </a>
           <a href="/stories">Stories</a>
-          <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </nav>
         <details className="mobile-menu">
@@ -32,7 +31,6 @@ export default async function ProjectsPage() {
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/stories">Stories</a>
-            <a href="/resources">Resources</a>
             <a href="/contact">Contact</a>
           </div>
         </details>

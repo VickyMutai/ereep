@@ -68,7 +68,6 @@ export default async function Home() {
           <a href="/about">About Us</a>
           <a href="/projects">Projects</a>
           <a href="/stories">Stories</a>
-          <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </nav>
         <details className="mobile-menu">
@@ -77,7 +76,6 @@ export default async function Home() {
             <a href="/about">About Us</a>
             <a href="/projects">Projects</a>
             <a href="/stories">Stories</a>
-            <a href="/resources">Resources</a>
             <a href="/contact">Contact</a>
           </div>
         </details>

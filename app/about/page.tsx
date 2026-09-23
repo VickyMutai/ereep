@@ -23,7 +23,6 @@ export default async function AboutPage() {
           </a>
           <a href="/projects">Projects</a>
           <a href="/stories">Stories</a>
-          <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </nav>
         <details className="mobile-menu">
@@ -32,7 +31,6 @@ export default async function AboutPage() {
             <a href="/">Home</a>
             <a href="/projects">Projects</a>
             <a href="/stories">Stories</a>
-            <a href="/resources">Resources</a>
             <a href="/contact">Contact</a>
           </div>
         </details>

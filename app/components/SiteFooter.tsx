@@ -27,7 +27,6 @@ export function SiteFooter() {
           <a href="/about">About us</a>
           <a href="/projects">Projects</a>
           <a href="/stories">Impact stories</a>
-          <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </nav>
       </div>

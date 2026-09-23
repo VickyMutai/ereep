@@ -35,7 +35,6 @@ export default async function ContactPage() {
           <a href="/about">About Us</a>
           <a href="/projects">Projects</a>
           <a href="/stories">Stories</a>
-          <a href="/resources">Resources</a>
           <a className="active" href="/contact">
             Contact
           </a>
@@ -47,7 +46,6 @@ export default async function ContactPage() {
             <a href="/about">About Us</a>
             <a href="/projects">Projects</a>
             <a href="/stories">Stories</a>
-            <a href="/resources">Resources</a>
           </div>
         </details>
         <a className="button button-small" href="/#donate">
