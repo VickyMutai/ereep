@@ -16,7 +16,7 @@ export function SiteFooter() {
           <a href="/about">About us</a><a href="/projects">Projects</a><a href="/stories">Impact stories</a><a href="/resources">Resources</a><a href="/contact">Contact</a>
         </nav>
       </div>
-      <div className="footer-bottom"><span>© {new Date().getFullYear()} EREEP</span><span>Rooted in Langas, Eldoret</span><a href="/admin">Content Studio</a></div>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} EREEP</span><span>Rooted in Langas, Eldoret</span><span>Community-based organisation</span></div>
     </footer>
   );
 }

@@ -1,5 +1,3 @@
-import { env } from 'cloudflare:workers';
-
 export type AboutItem = { title: string; body: string };
 export type AboutContent = {
   heroTitle: string;
@@ -78,23 +76,6 @@ export const defaultAboutContent: AboutContent = {
   approachBody: 'EREEP believes that lasting change begins with people. When people understand their rights, recognise their strengths and have the knowledge, confidence and opportunities to participate, they are better able to shape solutions to the challenges affecting their lives and communities.\n\nEREEP works alongside people and communities, rather than simply working for them. The organisation listens to community needs, builds on local strengths and works with children, young people, caregivers, persons with disabilities, women, families, schools, community leaders and other local actors to strengthen their capacity to create change.\n\nThrough education, mentorship, advocacy, community engagement, referral support and livelihood opportunities, EREEP creates spaces for people to learn, participate, speak up and take action. Partnerships with schools, government, community structures and other organisations strengthen these efforts and connect people with the services, opportunities and support they need.\n\nThe approach is grounded in community participation, inclusion, dignity and local ownership. EREEP seeks to strengthen people\'s ability to make informed decisions, support one another, advocate for their rights and contribute to positive change within their families and communities. By investing in people and strengthening the structures around them, EREEP works towards safer, more inclusive, empowered and resilient communities where people are able to shape their own futures and sustain positive change.',
 };
 
-async function ensureContentTable() {
-  await env.DB.prepare('CREATE TABLE IF NOT EXISTS site_content (content_key TEXT PRIMARY KEY NOT NULL, value_json TEXT NOT NULL, updated_at INTEGER NOT NULL)').run();
-}
-
 export async function getAboutContent(): Promise<AboutContent> {
-  try {
-    await ensureContentTable();
-    const row = await env.DB.prepare('SELECT value_json FROM site_content WHERE content_key = ?').bind('about').first<{ value_json: string }>();
-    if (!row) return defaultAboutContent;
-    const saved = JSON.parse(row.value_json) as Partial<AboutContent>;
-    return { ...defaultAboutContent, ...saved };
-  } catch {
-    return defaultAboutContent;
-  }
-}
-
-export async function saveAboutContent(content: AboutContent) {
-  await ensureContentTable();
-  await env.DB.prepare('INSERT INTO site_content (content_key, value_json, updated_at) VALUES (?, ?, ?) ON CONFLICT(content_key) DO UPDATE SET value_json = excluded.value_json, updated_at = excluded.updated_at').bind('about', JSON.stringify(content), Date.now()).run();
+  return defaultAboutContent;
 }

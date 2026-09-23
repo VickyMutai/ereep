@@ -1,5 +1,3 @@
-import { env } from 'cloudflare:workers';
-
 export type ProjectArea = { title: string; subtitle: string; body: string };
 export type ProjectContent = {
   title: string;
@@ -128,22 +126,6 @@ export const defaultProjectsContent: ProjectsContent = {
   advocacyBody: 'Change often begins with someone speaking up: a child saying something is not right, a young person asking for an opportunity, a caregiver raising a concern, or a community recognising an issue that can no longer be ignored. EREEP creates spaces where people can understand their rights, share experiences, raise concerns and speak about issues affecting their lives. Advocacy is not about speaking on behalf of communities; it is about helping people find the confidence, knowledge and platforms to speak for themselves.\n\nAcross its work, EREEP brings attention to human and child rights, gender equality, disability inclusion, environmental care, protection and access to opportunities and services.\n\nEREEP works with the Uasin Gishu County Government, civil society networks, schools, community-based organisations, community and religious leaders, service providers and other partners. These relationships connect community voices with institutions and resources, strengthen referrals and create opportunities for collective action.\n\nWhen people have the confidence to speak, the platforms to be heard and the right people at the table, voices can become action, and action can become lasting change.',
 };
 
-async function ensureContentTable() {
-  await env.DB.prepare('CREATE TABLE IF NOT EXISTS site_content (content_key TEXT PRIMARY KEY NOT NULL, value_json TEXT NOT NULL, updated_at INTEGER NOT NULL)').run();
-}
-
 export async function getProjectsContent(): Promise<ProjectsContent> {
-  try {
-    await ensureContentTable();
-    const row = await env.DB.prepare('SELECT value_json FROM site_content WHERE content_key = ?').bind('projects').first<{ value_json: string }>();
-    if (!row) return defaultProjectsContent;
-    return { ...defaultProjectsContent, ...JSON.parse(row.value_json) };
-  } catch {
-    return defaultProjectsContent;
-  }
-}
-
-export async function saveProjectsContent(content: ProjectsContent) {
-  await ensureContentTable();
-  await env.DB.prepare('INSERT INTO site_content (content_key, value_json, updated_at) VALUES (?, ?, ?) ON CONFLICT(content_key) DO UPDATE SET value_json = excluded.value_json, updated_at = excluded.updated_at').bind('projects', JSON.stringify(content), Date.now()).run();
+  return defaultProjectsContent;
 }

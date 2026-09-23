@@ -12,11 +12,8 @@ const focusAreas = [
   { title: 'Community Engagement', copy: 'Bringing families, schools and local leaders together to shape practical, lasting solutions.', tone: 'gold', icon: 'Together' },
 ];
 
-type HomeProps = { searchParams?: Promise<{ newsletter?: string }> };
-
-export default async function Home({ searchParams }: HomeProps) {
-  const [content, query] = await Promise.all([getHomeContent(), searchParams]);
-  const subscribed = query?.newsletter === 'success';
+export default async function Home() {
+  const content = await getHomeContent();
 
   return (
     <main>
@@ -64,7 +61,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
       <section className="newsletter section" id="newsletter">
         <div><p className="eyebrow">Stay in the loop</p><h2>{content.newsletterTitle}</h2><p>{content.newsletterBody}</p></div>
-        <form action="/api/newsletter" method="post"><label htmlFor="email">Email address</label><div><input id="email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" /><button type="submit">Subscribe</button></div>{subscribed && <p className="form-success" role="status">Thank you — you are on the list.</p>}<small>Temporary signup only. We will connect a full newsletter service later.</small></form>
+        <form action="https://formsubmit.co/vicky.mutai96@gmail.com" method="post"><input type="hidden" name="_subject" value="New EREEP newsletter signup" /><input type="hidden" name="form" value="EREEP newsletter" /><input className="contact-honeypot" type="text" name="_honey" tabIndex={-1} autoComplete="off" /><label htmlFor="email">Email address</label><div><input id="email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" /><button type="submit">Subscribe</button></div><small>Signup details are sent securely to the EREEP team by email.</small></form>
       </section>
 
       <SiteFooter />

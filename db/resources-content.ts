@@ -1,5 +1,3 @@
-import { env } from 'cloudflare:workers';
-
 export type ImpactStory = { category: string; title: string; lead: string; body: string; image: string };
 export type ImpactStat = { value: string; label: string };
 export type ResourcesContent = {
@@ -62,22 +60,6 @@ export const defaultResourcesContent: ResourcesContent = {
   ],
 };
 
-async function ensureContentTable() {
-  await env.DB.prepare('CREATE TABLE IF NOT EXISTS site_content (content_key TEXT PRIMARY KEY NOT NULL, value_json TEXT NOT NULL, updated_at INTEGER NOT NULL)').run();
-}
-
 export async function getResourcesContent(): Promise<ResourcesContent> {
-  try {
-    await ensureContentTable();
-    const row = await env.DB.prepare('SELECT value_json FROM site_content WHERE content_key = ?').bind('resources').first<{ value_json: string }>();
-    if (!row) return defaultResourcesContent;
-    return { ...defaultResourcesContent, ...JSON.parse(row.value_json) };
-  } catch {
-    return defaultResourcesContent;
-  }
-}
-
-export async function saveResourcesContent(content: ResourcesContent) {
-  await ensureContentTable();
-  await env.DB.prepare('INSERT INTO site_content (content_key, value_json, updated_at) VALUES (?, ?, ?) ON CONFLICT(content_key) DO UPDATE SET value_json = excluded.value_json, updated_at = excluded.updated_at').bind('resources', JSON.stringify(content), Date.now()).run();
+  return defaultResourcesContent;
 }
