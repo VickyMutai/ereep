@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-main">
-        <a className="footer-brand" href="/" aria-label="EREEP home">
+        <Link className="footer-brand" href="/" aria-label="EREEP home">
           <span>
             <img src="/logo.png" alt="" />
           </span>
@@ -11,23 +13,23 @@ export function SiteFooter() {
             <br />
             Empowerment Program
           </strong>
-        </a>
+        </Link>
         <div className="footer-purpose">
           <p className="footer-label">Our purpose</p>
           <p>
             Empowering, liberating and transforming lives in the marginalized
             Langas community.
           </p>
-          <a href="/contact">
+          <Link href="/contact">
             Start a conversation <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
         <nav className="footer-links" aria-label="Footer navigation">
           <span className="footer-label">Explore</span>
-          <a href="/about">About us</a>
-          <a href="/projects">Our Impact</a>
-          <a href="/stories">Impact stories</a>
-          <a href="/contact">Contact Us</a>
+          <Link href="/about">About us</Link>
+          <Link href="/projects">Our Impact</Link>
+          <Link href="/stories">Impact stories</Link>
+          <Link href="/contact">Contact Us</Link>
         </nav>
       </div>
       <div className="footer-bottom">

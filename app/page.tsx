@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getHomeContent } from "../db/site-content";
 import { GalleryTabs } from "./components/GalleryTabs";
 import { SiteFooter } from "./components/SiteFooter";
@@ -66,18 +67,18 @@ export default async function Home() {
           <a className="active" href="#top">
             Home
           </a>
-          <a href="/about">About Us</a>
-          <a href="/projects">Our Impact</a>
-          <a href="/stories">Stories</a>
-          <a href="/contact">Contact Us</a>
+          <Link href="/about">About Us</Link>
+          <Link href="/projects">Our Impact</Link>
+          <Link href="/stories">Stories</Link>
+          <Link href="/contact">Contact Us</Link>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
-            <a href="/about">About Us</a>
-            <a href="/projects">Our Impact</a>
-            <a href="/stories">Stories</a>
-            <a href="/contact">Contact Us</a>
+            <Link href="/about">About Us</Link>
+            <Link href="/projects">Our Impact</Link>
+            <Link href="/stories">Stories</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
         </details>
         <a className="button button-small" href="#donate">
@@ -114,9 +115,9 @@ export default async function Home() {
         <div className="intro-copy">
           <p>{content.introBodyOne}</p>
           <p>{content.introBodyTwo}</p>
-          <a className="underlined-link" href="/about">
+          <Link className="underlined-link" href="/about">
             Discover our story →
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -152,7 +153,7 @@ export default async function Home() {
         </div>
         <div className="focus-grid">
           {focusAreas.map((area, index) => (
-            <a
+            <Link
               className={`focus-card ${area.tone}`}
               href="/projects"
               key={area.title}
@@ -165,7 +166,7 @@ export default async function Home() {
               <span className="card-arrow" aria-hidden="true">
                 ↗
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

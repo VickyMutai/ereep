@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getProjectsContent } from "../../db/projects-content";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -13,25 +14,25 @@ export default async function ProjectsPage() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="EREEP home">
+        <Link className="brand" href="/" aria-label="EREEP home">
           <img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" />
-        </a>
+        </Link>
         <nav aria-label="Primary navigation">
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a className="active" href="/projects">
+          <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
+          <Link className="active" href="/projects">
             Our Impact
-          </a>
-          <a href="/stories">Stories</a>
-          <a href="/contact">Contact Us</a>
+          </Link>
+          <Link href="/stories">Stories</Link>
+          <Link href="/contact">Contact Us</Link>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/stories">Stories</a>
-            <a href="/contact">Contact Us</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/stories">Stories</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
         </details>
         <a className="button button-small" href="/#donate">
@@ -139,9 +140,9 @@ export default async function ProjectsPage() {
         <p className="eyebrow dark">Stand with the community</p>
         <h2>Stronger programmes grow from strong partnerships.</h2>
         <div>
-          <a className="button" href="/contact">
+          <Link className="button" href="/contact">
             Work with us
-          </a>
+          </Link>
           <a className="underlined-link" href="/#newsletter">
             Follow our work →
           </a>

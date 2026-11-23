@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getContactContent } from "../../db/contact";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -16,7 +17,7 @@ export default async function ContactPage() {
       href: "mailto:" + content.email,
     },
     content.phone && {
-      label: "Phone",
+      label: "Director",
       value: content.phone,
       href: "tel:" + content.phone.replace(/\s/g, ""),
     },
@@ -32,25 +33,25 @@ export default async function ContactPage() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="EREEP home">
+        <Link className="brand" href="/" aria-label="EREEP home">
           <img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" />
-        </a>
+        </Link>
         <nav aria-label="Primary navigation">
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/projects">Our Impact</a>
-          <a href="/stories">Stories</a>
-          <a className="active" href="/contact">
+          <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/projects">Our Impact</Link>
+          <Link href="/stories">Stories</Link>
+          <Link className="active" href="/contact">
             Contact Us
-          </a>
+          </Link>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/projects">Our Impact</a>
-            <a href="/stories">Stories</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/projects">Our Impact</Link>
+            <Link href="/stories">Stories</Link>
           </div>
         </details>
         <a className="button button-small" href="/#donate">

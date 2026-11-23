@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { DonorSlider } from "../components/DonorSlider";
 import { getAboutContent } from "../../db/about-content";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -13,25 +15,25 @@ export default async function AboutPage() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="EREEP home">
+        <Link className="brand" href="/" aria-label="EREEP home">
           <img src="/logo.png" alt="Edmund Rice Eldoret Empowerment Program" />
-        </a>
+        </Link>
         <nav aria-label="Primary navigation">
-          <a href="/">Home</a>
-          <a className="active" href="/about">
+          <Link href="/">Home</Link>
+          <Link className="active" href="/about">
             About Us
-          </a>
-          <a href="/projects">Our Impact</a>
-          <a href="/stories">Stories</a>
-          <a href="/contact">Contact Us</a>
+          </Link>
+          <Link href="/projects">Our Impact</Link>
+          <Link href="/stories">Stories</Link>
+          <Link href="/contact">Contact Us</Link>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
-            <a href="/">Home</a>
-            <a href="/projects">Our Impact</a>
-            <a href="/stories">Stories</a>
-            <a href="/contact">Contact Us</a>
+            <Link href="/">Home</Link>
+            <Link href="/projects">Our Impact</Link>
+            <Link href="/stories">Stories</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
         </details>
         <a className="button button-small" href="/#donate">
@@ -100,7 +102,7 @@ export default async function AboutPage() {
               <span>0{index + 1}</span>
               <h3>{project.title}</h3>
               <p>{project.body}</p>
-              <a href="/projects">Explore project →</a>
+              <Link href="/projects">Explore project →</Link>
             </article>
           ))}
         </div>
@@ -150,16 +152,29 @@ export default async function AboutPage() {
               <strong>7</strong>
               <span>Key donors</span>
             </div>
+            <div>
+              <strong>USD 10,000+</strong>
+              <span>Total funds raised</span>
+            </div>
+          </div>
+          <div className="impact-outcomes">
+            <article><strong>200</strong><span>Persons with disabilities empowered</span></article>
+            <article><strong>200</strong><span>PWD caregivers empowered</span></article>
+            <article><strong>300</strong><span>Teenage girls supported with reusable pads</span></article>
+            <article><strong>1,800</strong><span>Teen and young mothers empowered</span></article>
+            <article><strong>300</strong><span>Teen and young mothers in vocational skills</span></article>
+            <article><strong>50</strong><span>Key stakeholders engaged in forums</span></article>
           </div>
         </div>
         <div className="tab-panel" id="donors">
           <p className="eyebrow dark">Donors and partners</p>
           <h2>Strong partnerships sustain community-led change.</h2>
           <p>
-            EREEP works with key donors and 50 partner organisations and
-            collaborators. Approved donor names and logos will be published here
-            when the organisation confirms the public list.
+            EREEP works with 7 key donors and 50 partner organisations and
+            collaborators. The public donor identities and remaining public
+            logos will be added as they are confirmed.
           </p>
+          <DonorSlider />
         </div>
         <div className="tab-panel" id="team">
           <p className="eyebrow dark">EREEP Team</p>
@@ -210,9 +225,9 @@ export default async function AboutPage() {
         </div>
         <div>
           <p>{content.approachBody}</p>
-          <a className="button" href="/projects">
+          <Link className="button" href="/projects">
             See our projects
-          </a>
+          </Link>
         </div>
       </section>
 
