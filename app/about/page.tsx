@@ -134,21 +134,42 @@ export default async function AboutPage() {
           <p className="eyebrow dark">Our impact</p>
           <h2>Change measured in people and participation.</h2>
           <div className="about-impact-grid">
-            <div><strong>20,300</strong><span>Total beneficiaries</span></div>
-            <div><strong>100,000</strong><span>Indirect beneficiaries</span></div>
-            <div><strong>50</strong><span>Partners and collaborators</span></div>
-            <div><strong>7</strong><span>Key donors</span></div>
+            <div>
+              <strong>20,300</strong>
+              <span>Total beneficiaries</span>
+            </div>
+            <div>
+              <strong>100,000</strong>
+              <span>Indirect beneficiaries</span>
+            </div>
+            <div>
+              <strong>50</strong>
+              <span>Partners and collaborators</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>Key donors</span>
+            </div>
           </div>
         </div>
         <div className="tab-panel" id="donors">
           <p className="eyebrow dark">Donors and partners</p>
           <h2>Strong partnerships sustain community-led change.</h2>
-          <p>EREEP works with key donors and 50 partner organisations and collaborators. Approved donor names and logos will be published here when the organisation confirms the public list.</p>
+          <p>
+            EREEP works with key donors and 50 partner organisations and
+            collaborators. Approved donor names and logos will be published here
+            when the organisation confirms the public list.
+          </p>
         </div>
         <div className="tab-panel" id="team">
           <p className="eyebrow dark">EREEP Team</p>
           <h2>Local leadership, shared purpose.</h2>
-          <p>EREEP is fully managed by lay staff from the community, with continued oversight and support from the Edmund Rice Christian Brothers. Approved team profiles and photographs will be published here when available.</p>
+          <p>
+            EREEP is fully managed by lay staff from the community, with
+            continued oversight and support from the Edmund Rice Christian
+            Brothers. Approved team profiles and photographs will be published
+            here when available.
+          </p>
         </div>
       </section>
 

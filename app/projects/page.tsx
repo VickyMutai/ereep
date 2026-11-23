@@ -114,7 +114,10 @@ export default async function ProjectsPage() {
         </section>
       ))}
 
-      <nav className="impact-jump impact-advocacy" aria-label="Jump to advocacy">
+      <nav
+        className="impact-jump impact-advocacy"
+        aria-label="Jump to advocacy"
+      >
         <a href="#advocacy">
           <span>04</span>
           Advocacy and Partnerships

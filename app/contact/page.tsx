@@ -180,14 +180,27 @@ export default async function ContactPage() {
         <article id="volunteer">
           <p className="eyebrow">Volunteer</p>
           <h2>Use your skills alongside the community.</h2>
-          <p>Tell us about the skills, time and interests you would like to share.</p>
-          <a className="button" href="mailto:edmundreep@gmail.com?subject=EREEP volunteer enquiry">Volunteer enquiry</a>
+          <p>
+            Tell us about the skills, time and interests you would like to
+            share.
+          </p>
+          <a
+            className="button"
+            href="mailto:edmundreep@gmail.com?subject=EREEP volunteer enquiry"
+          >
+            Volunteer enquiry
+          </a>
         </article>
         <article id="resources">
           <p className="eyebrow">Resources</p>
           <h2>Find programme materials and updates.</h2>
-          <p>Reports, newsletters and public resources will be published as they become available.</p>
-          <a className="underlined-link" href="/#gallery">Explore the gallery →</a>
+          <p>
+            Reports, newsletters and public resources will be published as they
+            become available.
+          </p>
+          <a className="underlined-link" href="/#gallery">
+            Explore the gallery →
+          </a>
         </article>
       </section>
 

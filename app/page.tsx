@@ -1,4 +1,5 @@
 import { getHomeContent } from "../db/site-content";
+import { GalleryTabs } from "./components/GalleryTabs";
 import { SiteFooter } from "./components/SiteFooter";
 
 const focusAreas = [
@@ -181,9 +182,10 @@ export default async function Home() {
           <p>
             Meaningful and lasting change begins when people have the knowledge,
             confidence, opportunities and support to realise their potential and
-            participate in decisions that affect their lives. By working alongside
-            communities rather than simply working for them, EREEP promotes dignity,
-            inclusion, participation and social transformation.
+            participate in decisions that affect their lives. By working
+            alongside communities rather than simply working for them, EREEP
+            promotes dignity, inclusion, participation and social
+            transformation.
           </p>
           <div className="belief-values">
             <span>Dignity</span>
@@ -224,29 +226,7 @@ export default async function Home() {
       </section>
 
       <section className="gallery section" id="gallery">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow dark">Gallery</p>
-            <h2>See community action in practice.</h2>
-          </div>
-          <nav className="gallery-tabs" aria-label="Gallery sections">
-            <a href="#gallery-newsletters">Newsletters</a>
-            <a href="#gallery-photos">Photos</a>
-            <a href="#gallery-videos">Videos</a>
-            <a href="#gallery-posters">Posters</a>
-          </nav>
-        </div>
-        <div className="gallery-grid" id="gallery-photos">
-          <figure><img src="/images/projects/children-youth.jpg" alt="Children and youth participating in an EREEP activity" /><figcaption>Children and youth</figcaption></figure>
-          <figure><img src="/images/projects/wezesha-dada.jpg" alt="Girls participating in a Wezesha Dada session" /><figcaption>Wezesha Dada</figcaption></figure>
-          <figure><img src="/images/projects/disability.jpg" alt="A Breaking Disability Barriers community participant" /><figcaption>Disability inclusion</figcaption></figure>
-          <figure><img src="/images/advocacy/advocacy.jpg" alt="EREEP advocacy and community action" /><figcaption>Community advocacy</figcaption></figure>
-        </div>
-        <div className="gallery-types">
-          <article id="gallery-newsletters"><span>01</span><h3>Newsletters</h3><p>Programme updates and community stories.</p></article>
-          <article id="gallery-videos"><span>02</span><h3>Videos</h3><p>Videos will be added as approved material becomes available.</p></article>
-          <article id="gallery-posters"><span>03</span><h3>Posters</h3><p>Public awareness posters and campaign resources.</p></article>
-        </div>
+        <GalleryTabs />
       </section>
 
       <section className="newsletter section" id="newsletter">
@@ -255,10 +235,7 @@ export default async function Home() {
           <h2>{content.newsletterTitle}</h2>
           <p>{content.newsletterBody}</p>
         </div>
-        <form
-          action="https://formsubmit.co/edmundreep@gmail.com"
-          method="post"
-        >
+        <form action="https://formsubmit.co/edmundreep@gmail.com" method="post">
           <input
             type="hidden"
             name="_subject"
