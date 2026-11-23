@@ -1366,7 +1366,8 @@ h2 {
 .projects-hero-photo {
   position: absolute;
   inset: 0;
-  background: url("/images/projects/children-youth.jpg") center/contain no-repeat;
+  background: url("/images/projects/children-youth.jpg") center/contain
+    no-repeat;
   background-color: var(--navy);
 }
 .projects-hero-overlay {
@@ -2501,6 +2502,9 @@ h2 {
   .about-impact-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .impact-outcomes {
+    grid-template-columns: 1fr;
+  }
   .tab-panel {
     padding: 24px;
   }
@@ -2728,6 +2732,11 @@ h2 {
 :focus-visible {
   outline: 3px solid #f2b705;
   outline-offset: 4px;
+}
+@media (max-width: 620px) {
+  .impact-outcomes {
+    grid-template-columns: 1fr;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   * {

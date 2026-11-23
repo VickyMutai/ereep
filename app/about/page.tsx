@@ -158,12 +158,30 @@ export default async function AboutPage() {
             </div>
           </div>
           <div className="impact-outcomes">
-            <article><strong>200</strong><span>Persons with disabilities empowered</span></article>
-            <article><strong>200</strong><span>PWD caregivers empowered</span></article>
-            <article><strong>300</strong><span>Teenage girls supported with reusable pads</span></article>
-            <article><strong>1,800</strong><span>Teen and young mothers empowered</span></article>
-            <article><strong>300</strong><span>Teen and young mothers in vocational skills</span></article>
-            <article><strong>50</strong><span>Key stakeholders engaged in forums</span></article>
+            <article>
+              <strong>200</strong>
+              <span>Persons with disabilities empowered</span>
+            </article>
+            <article>
+              <strong>200</strong>
+              <span>PWD caregivers empowered</span>
+            </article>
+            <article>
+              <strong>300</strong>
+              <span>Teenage girls supported with reusable pads</span>
+            </article>
+            <article>
+              <strong>1,800</strong>
+              <span>Teen and young mothers empowered</span>
+            </article>
+            <article>
+              <strong>300</strong>
+              <span>Teen and young mothers in vocational skills</span>
+            </article>
+            <article>
+              <strong>50</strong>
+              <span>Key stakeholders engaged in forums</span>
+            </article>
           </div>
         </div>
         <div className="tab-panel" id="donors">
