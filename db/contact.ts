@@ -16,8 +16,8 @@ export const defaultContactContent: ContactContent = {
   formTitle: 'How can we help?',
   formLead: 'Share a few details below and the EREEP team will respond through the email address or phone number you provide.',
   responseNote: 'Please allow the team time to review your message and connect it with the right programme or person.',
-  email: 'vicky.mutai96@gmail.com',
-  phone: '',
+  email: 'edmundreep@gmail.com',
+  phone: '0715408929',
   address: '',
   hours: '',
 };

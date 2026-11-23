@@ -19,20 +19,20 @@ export default async function StoriesPage() {
         <nav aria-label="Primary navigation">
           <a href="/">Home</a>
           <a href="/about">About Us</a>
-          <a href="/projects">Projects</a>
+          <a href="/projects">Our Impact</a>
           <a className="active" href="/stories">
             Stories
           </a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
             <a href="/">Home</a>
             <a href="/about">About Us</a>
-            <a href="/projects">Projects</a>
+            <a href="/projects">Our Impact</a>
             <a href="/stories">Stories</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </details>
         <a className="button button-small" href="/#donate">

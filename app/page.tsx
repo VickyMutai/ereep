@@ -66,17 +66,17 @@ export default async function Home() {
             Home
           </a>
           <a href="/about">About Us</a>
-          <a href="/projects">Projects</a>
+          <a href="/projects">Our Impact</a>
           <a href="/stories">Stories</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
             <a href="/about">About Us</a>
-            <a href="/projects">Projects</a>
+            <a href="/projects">Our Impact</a>
             <a href="/stories">Stories</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </details>
         <a className="button button-small" href="#donate">
@@ -88,7 +88,7 @@ export default async function Home() {
         <div className="hero-image" aria-hidden="true" />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <h2>{content.heroTitle}</h2>
+          <h1>{content.heroTitle}</h1>
           <p className="hero-copy">{content.heroBody}</p>
           <div className="hero-actions">
             <a className="button" href="#focus">
@@ -116,6 +116,25 @@ export default async function Home() {
           <a className="underlined-link" href="/about">
             Discover our story →
           </a>
+        </div>
+      </section>
+
+      <section className="impact-strip" aria-label="EREEP impact snapshot">
+        <div>
+          <strong>20,300</strong>
+          <span>Total beneficiaries</span>
+        </div>
+        <div>
+          <strong>100,000</strong>
+          <span>Indirect beneficiaries</span>
+        </div>
+        <div>
+          <strong>50</strong>
+          <span>Partners and collaborators</span>
+        </div>
+        <div>
+          <strong>7</strong>
+          <span>Key donors</span>
         </div>
       </section>
 
@@ -162,7 +181,9 @@ export default async function Home() {
           <p>
             Meaningful and lasting change begins when people have the knowledge,
             confidence, opportunities and support to realise their potential and
-            participate in decisions that affect their lives.
+            participate in decisions that affect their lives. By working alongside
+            communities rather than simply working for them, EREEP promotes dignity,
+            inclusion, participation and social transformation.
           </p>
           <div className="belief-values">
             <span>Dignity</span>
@@ -202,6 +223,32 @@ export default async function Home() {
         </div>
       </section>
 
+      <section className="gallery section" id="gallery">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow dark">Gallery</p>
+            <h2>See community action in practice.</h2>
+          </div>
+          <nav className="gallery-tabs" aria-label="Gallery sections">
+            <a href="#gallery-newsletters">Newsletters</a>
+            <a href="#gallery-photos">Photos</a>
+            <a href="#gallery-videos">Videos</a>
+            <a href="#gallery-posters">Posters</a>
+          </nav>
+        </div>
+        <div className="gallery-grid" id="gallery-photos">
+          <figure><img src="/images/projects/children-youth.jpg" alt="Children and youth participating in an EREEP activity" /><figcaption>Children and youth</figcaption></figure>
+          <figure><img src="/images/projects/wezesha-dada.jpg" alt="Girls participating in a Wezesha Dada session" /><figcaption>Wezesha Dada</figcaption></figure>
+          <figure><img src="/images/projects/disability.jpg" alt="A Breaking Disability Barriers community participant" /><figcaption>Disability inclusion</figcaption></figure>
+          <figure><img src="/images/advocacy/advocacy.jpg" alt="EREEP advocacy and community action" /><figcaption>Community advocacy</figcaption></figure>
+        </div>
+        <div className="gallery-types">
+          <article id="gallery-newsletters"><span>01</span><h3>Newsletters</h3><p>Programme updates and community stories.</p></article>
+          <article id="gallery-videos"><span>02</span><h3>Videos</h3><p>Videos will be added as approved material becomes available.</p></article>
+          <article id="gallery-posters"><span>03</span><h3>Posters</h3><p>Public awareness posters and campaign resources.</p></article>
+        </div>
+      </section>
+
       <section className="newsletter section" id="newsletter">
         <div>
           <p className="eyebrow">Stay in the loop</p>
@@ -209,7 +256,7 @@ export default async function Home() {
           <p>{content.newsletterBody}</p>
         </div>
         <form
-          action="https://formsubmit.co/vicky.mutai96@gmail.com"
+          action="https://formsubmit.co/edmundreep@gmail.com"
           method="post"
         >
           <input

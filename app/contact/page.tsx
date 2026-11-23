@@ -3,7 +3,7 @@ import { getContactContent } from "../../db/contact";
 import { SiteFooter } from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Contact | EREEP",
+  title: "Contact Us | EREEP",
   description: "Contact the Edmund Rice Eldoret Empowerment Program team.",
 };
 
@@ -20,6 +20,11 @@ export default async function ContactPage() {
       value: content.phone,
       href: "tel:" + content.phone.replace(/\s/g, ""),
     },
+    content.phone && {
+      label: "WhatsApp",
+      value: "Chat on WhatsApp",
+      href: "https://wa.me/254715408929",
+    },
     content.address && { label: "Address", value: content.address },
     content.hours && { label: "Opening hours", value: content.hours },
   ].filter(Boolean) as { label: string; value: string; href?: string }[];
@@ -33,10 +38,10 @@ export default async function ContactPage() {
         <nav aria-label="Primary navigation">
           <a href="/">Home</a>
           <a href="/about">About Us</a>
-          <a href="/projects">Projects</a>
+          <a href="/projects">Our Impact</a>
           <a href="/stories">Stories</a>
           <a className="active" href="/contact">
-            Contact
+            Contact Us
           </a>
         </nav>
         <details className="mobile-menu">
@@ -44,7 +49,7 @@ export default async function ContactPage() {
           <div>
             <a href="/">Home</a>
             <a href="/about">About Us</a>
-            <a href="/projects">Projects</a>
+            <a href="/projects">Our Impact</a>
             <a href="/stories">Stories</a>
           </div>
         </details>
@@ -63,7 +68,13 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <section className="contact-layout section">
+      <nav className="contact-tabs" aria-label="Contact page sections">
+        <a href="#contact-form">Contacts</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#resources">Resources</a>
+      </nav>
+
+      <section className="contact-layout section" id="contact-details">
         <div className="contact-intro">
           <p className="eyebrow dark">Send an enquiry</p>
           <h2>{content.formTitle}</h2>
@@ -87,7 +98,7 @@ export default async function ContactPage() {
         <form
           className="contact-form"
           id="contact-form"
-          action="https://formsubmit.co/vicky.mutai96@gmail.com"
+          action="https://formsubmit.co/edmundreep@gmail.com"
           method="post"
         >
           <input
@@ -163,6 +174,21 @@ export default async function ContactPage() {
             Your details will only be used to respond to this enquiry.
           </small>
         </form>
+      </section>
+
+      <section className="contact-options section">
+        <article id="volunteer">
+          <p className="eyebrow">Volunteer</p>
+          <h2>Use your skills alongside the community.</h2>
+          <p>Tell us about the skills, time and interests you would like to share.</p>
+          <a className="button" href="mailto:edmundreep@gmail.com?subject=EREEP volunteer enquiry">Volunteer enquiry</a>
+        </article>
+        <article id="resources">
+          <p className="eyebrow">Resources</p>
+          <h2>Find programme materials and updates.</h2>
+          <p>Reports, newsletters and public resources will be published as they become available.</p>
+          <a className="underlined-link" href="/#gallery">Explore the gallery →</a>
+        </article>
       </section>
 
       <SiteFooter />

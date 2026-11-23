@@ -25,9 +25,9 @@ export function SiteFooter() {
         <nav className="footer-links" aria-label="Footer navigation">
           <span className="footer-label">Explore</span>
           <a href="/about">About us</a>
-          <a href="/projects">Projects</a>
+          <a href="/projects">Our Impact</a>
           <a href="/stories">Impact stories</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </nav>
       </div>
       <div className="footer-bottom">

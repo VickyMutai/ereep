@@ -3,7 +3,7 @@ import { getProjectsContent } from "../../db/projects-content";
 import { SiteFooter } from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Our Projects | EREEP",
+  title: "Our Impact | EREEP",
   description:
     "Explore EREEP programmes supporting children, young people, girls, young mothers, persons with disabilities and caregivers in Langas.",
 };
@@ -20,10 +20,10 @@ export default async function ProjectsPage() {
           <a href="/">Home</a>
           <a href="/about">About Us</a>
           <a className="active" href="/projects">
-            Projects
+            Our Impact
           </a>
           <a href="/stories">Stories</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
@@ -31,7 +31,7 @@ export default async function ProjectsPage() {
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/stories">Stories</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </details>
         <a className="button button-small" href="/#donate">
@@ -43,7 +43,7 @@ export default async function ProjectsPage() {
         <div className="projects-hero-photo" aria-hidden="true" />
         <div className="projects-hero-overlay" />
         <div className="projects-hero-content">
-          <p className="eyebrow">Our projects</p>
+          <p className="eyebrow">Our impact</p>
           <h1>{content.heroTitle}</h1>
           <p>{content.heroLead}</p>
         </div>
@@ -114,7 +114,14 @@ export default async function ProjectsPage() {
         </section>
       ))}
 
-      <section className="advocacy section">
+      <nav className="impact-jump impact-advocacy" aria-label="Jump to advocacy">
+        <a href="#advocacy">
+          <span>04</span>
+          Advocacy and Partnerships
+        </a>
+      </nav>
+
+      <section className="advocacy section" id="advocacy">
         <div>
           <p className="eyebrow">Across every project</p>
           <h2>{content.advocacyTitle}</h2>

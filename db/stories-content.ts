@@ -24,7 +24,7 @@ export const defaultStoriesContent: StoriesContent = {
       category: 'Children and Youth Project',
       title: 'Kevin’s Journey From a Lost Cause to Finding Purpose',
       summary: 'Kevin’s journey from a young man struggling with substance use to a youth leader, social worker and pastor.',
-      image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=86',
+      image: '/images/projects/children-youth.jpg',
       imageAlt: 'Young community volunteers gathered outdoors',
       sections: [
         {
@@ -50,7 +50,7 @@ export const defaultStoriesContent: StoriesContent = {
       category: 'Breaking Disability Barriers Project',
       title: 'Clemencia’s Journey From PWD Caregiver to Entrepreneur',
       summary: 'Turning determination into opportunity while advocating for her child and creating new possibilities for her family.',
-      image: 'https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1800&q=86',
+      image: '/images/projects/disability.jpg',
       imageAlt: 'Woman working at a small community market',
       sections: [
         {
@@ -72,7 +72,7 @@ export const defaultStoriesContent: StoriesContent = {
       category: 'Wezesha Dada Girls Empowerment Project',
       title: 'Restoring Dignity, Keeping Girls in School',
       summary: 'The impact of sustainable menstrual health support in Langas.',
-      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=86',
+      image: '/images/projects/wezesha-dada.jpg',
       imageAlt: 'Students learning together in a classroom',
       sections: [
         {

@@ -31,7 +31,7 @@ export const defaultProjectsContent: ProjectsContent = {
       tagline: 'Children and young people are at the heart of thriving communities.',
       overview: 'The Children and Youth Project (CYP) is the foundation of EREEP\'s work. What began with a focus on children and young people has grown into a programme that supports them through different stages of their development, helping them learn, build confidence, make positive choices, understand their rights, stay safe and participate meaningfully in their communities.\n\nCYP works with children, adolescents and out-of-school youth, while also engaging parents and caregivers, teachers, community leaders and other local actors. The project currently works with local public secondary schools and comprehensive primary schools in Langas.',
       goal: 'To support and improve the developmental wellbeing of children and young people in Langas community.',
-      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=86',
+      image: '/images/projects/children-youth.jpg',
       areas: [
         {
           title: 'Msingi Bora Children Life Skills',
@@ -66,7 +66,7 @@ export const defaultProjectsContent: ProjectsContent = {
       tagline: 'Creating a future where girls can thrive.',
       overview: 'Growing up as a girl is great, but it can also come with barriers that affect access to education, enjoyment of rights, informed personal choices and the ability to pursue aspirations.\n\nWezesha Dada creates spaces where girls can gain knowledge, build confidence, understand and exercise their rights, and make informed decisions about their health, education and futures. The project also engages boys, families, teachers and community actors to create environments where girls can learn, participate and thrive.\n\nThrough sexual and reproductive health and rights education, menstrual health support, mentorship, gender equality, psychosocial support and economic empowerment, the project responds to social, practical and economic barriers affecting girls.',
       goal: 'To strengthen girls\' knowledge, confidence, rights, wellbeing and opportunities while creating supportive environments around them.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=86',
+      image: '/images/projects/wezesha-dada.jpg',
       areas: [
         {
           title: 'Supporting Girls to Shape Their Futures',
@@ -101,7 +101,7 @@ export const defaultProjectsContent: ProjectsContent = {
       tagline: 'Creating a community where everyone belongs.',
       overview: 'Disability should never be a barrier to dignity, opportunity or participation. Yet for many persons with disabilities, barriers come not only from their circumstances, but from the attitudes, environments and systems around them.\n\nThe Breaking Disability Barriers Project walks alongside persons with disabilities, caregivers and the people around them to challenge these barriers and build a community where everyone is understood, included and supported to participate, exercise their rights and thrive.',
       goal: 'To promote the rights, inclusion, participation and economic independence of persons with disabilities and their caregivers.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=86',
+      image: '/images/projects/disability.jpg',
       areas: [
         {
           title: 'Understanding and Inclusive Support',

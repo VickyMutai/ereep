@@ -21,17 +21,17 @@ export default async function AboutPage() {
           <a className="active" href="/about">
             About Us
           </a>
-          <a href="/projects">Projects</a>
+          <a href="/projects">Our Impact</a>
           <a href="/stories">Stories</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </nav>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <div>
             <a href="/">Home</a>
-            <a href="/projects">Projects</a>
+            <a href="/projects">Our Impact</a>
             <a href="/stories">Stories</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </details>
         <a className="button button-small" href="/#donate">
@@ -121,6 +121,34 @@ export default async function AboutPage() {
             Listen to the community. Walk alongside its people. Empower them to
             shape their future.
           </blockquote>
+        </div>
+      </section>
+
+      <section className="about-tabs section" aria-label="About EREEP">
+        <nav className="tab-nav">
+          <a href="#impact">Impact</a>
+          <a href="#donors">Donors</a>
+          <a href="#team">EREEP Team</a>
+        </nav>
+        <div className="tab-panel" id="impact">
+          <p className="eyebrow dark">Our impact</p>
+          <h2>Change measured in people and participation.</h2>
+          <div className="about-impact-grid">
+            <div><strong>20,300</strong><span>Total beneficiaries</span></div>
+            <div><strong>100,000</strong><span>Indirect beneficiaries</span></div>
+            <div><strong>50</strong><span>Partners and collaborators</span></div>
+            <div><strong>7</strong><span>Key donors</span></div>
+          </div>
+        </div>
+        <div className="tab-panel" id="donors">
+          <p className="eyebrow dark">Donors and partners</p>
+          <h2>Strong partnerships sustain community-led change.</h2>
+          <p>EREEP works with key donors and 50 partner organisations and collaborators. Approved donor names and logos will be published here when the organisation confirms the public list.</p>
+        </div>
+        <div className="tab-panel" id="team">
+          <p className="eyebrow dark">EREEP Team</p>
+          <h2>Local leadership, shared purpose.</h2>
+          <p>EREEP is fully managed by lay staff from the community, with continued oversight and support from the Edmund Rice Christian Brothers. Approved team profiles and photographs will be published here when available.</p>
         </div>
       </section>
 
