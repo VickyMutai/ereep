@@ -81,12 +81,19 @@ export function GalleryTabs() {
       </div>
 
       {activeTab === "Photos" && (
-        <div className="gallery-slideshow" id="gallery-panel-photos" role="tabpanel" aria-label="Photo slideshow">
+        <div
+          className="gallery-slideshow"
+          id="gallery-panel-photos"
+          role="tabpanel"
+          aria-label="Photo slideshow"
+        >
           <button
             className="gallery-slide-arrow previous"
             type="button"
             aria-label="Previous photo"
-            onClick={() => setPhotoIndex((photoIndex - 1 + photos.length) % photos.length)}
+            onClick={() =>
+              setPhotoIndex((photoIndex - 1 + photos.length) % photos.length)
+            }
           >
             ←
           </button>
@@ -121,7 +128,12 @@ export function GalleryTabs() {
       )}
 
       {activeTab === "Posters" && (
-        <div className="poster-grid" id="gallery-panel-posters" role="tabpanel" aria-label="Posters">
+        <div
+          className="poster-grid"
+          id="gallery-panel-posters"
+          role="tabpanel"
+          aria-label="Posters"
+        >
           {posters.map(([filename, caption]) => (
             <figure key={filename}>
               <img
